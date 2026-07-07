@@ -1,3 +1,7 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+
+
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -25,3 +29,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+/* @media (max-width: 768px) {
+  .menu li{
+  padding: 0;
+}
+
+}
+@media (min-width: 1024px) {
+ .menu li{
+  padding: 0;
+}
+
+} */

@@ -1,38 +1,28 @@
+'use client'
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
+    const pathname = usePathname();
+    console.log(pathname);
     return (
-       
-            <div className="navbar bg-base-100 shadow-sm">
+
+<div className="navbar bg-base-100 shadow-sm px-2 sm:px-10 lg:px-20">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="flex gap-2">
-    <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-    <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-        </div>
-      </div>
-      <ul
-        tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
+    <Image  src="/logo.png" height={120} width={120} alt='logo'/>
+  </div >
+  <div className="flex-none ">
+    <ul className="menu menu-horizontal ml-10 text-gray-600 ">
+     
+      <Link  className={pathname==="/" ? "text-white bg-green-900 rounded-sm " :pathname==="/home" ? "text-white bg-green-900 rounded-sm" : " " } href="/home"> <li > <button><i className="fa-solid fa-house"></i>Home</button></li></Link>
+      
+       <li><button><i className="fa-regular fa-clock"></i>Timeline</button> </li>
+       <li> <button><i className="fa-solid fa-chart-line"></i>Stats</button></li>
+    </ul>
   </div>
 </div>
-        
     );
 };
 
