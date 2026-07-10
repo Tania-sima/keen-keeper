@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 const FooterPage = () => {
     return (
         
@@ -11,7 +10,7 @@ const FooterPage = () => {
       Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
      </p>
   </aside>
-  <nav >
+  <nav>
     <p className='font-semibold text-gray-200'>Social Links</p>
     <div className="grid grid-flow-col gap-4">
      <a className=" bg-white text-black border-2 border-white rounded-full px-1">
@@ -27,7 +26,7 @@ const FooterPage = () => {
   </nav>
 
 
-  <footer className="footer sm:footer-horizontal  text-gray-300 items-center p-4 text-gray-400 pt-3 border-t-2 border-gray-500">
+  <footer className="footer sm:footer-horizontal items-center p-4 text-gray-400 pt-3 border-t-2 border-gray-500">
   <aside className="grid-flow-col md:mr-9 lg:mr-34 lg:text-left pr-9">
     
     <p>&copy; 2026 KeenKeeper. All rights reserved.</p>

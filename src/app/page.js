@@ -1,12 +1,14 @@
 import Image from "next/image";
-import HomePage from "./home/page";
-import FooterPage from "./components/footer/page";
+
+import UserPage from "./user/page";
 
 export default function Home() {
   return (
    
-   <div><HomePage></HomePage>
-    <FooterPage></FooterPage>
+   <div><UserPage></UserPage>
+  
+    
+    
     </div>
   );
 }
