@@ -1,7 +1,9 @@
+
 import React from 'react'; 
 import UserCard from '@/app/components/userCard';
 import Image from 'next/image';
 import Link from 'next/link';
+import Toast from '@/app/components/Toast';
 
 const users= [
   {
@@ -156,8 +158,16 @@ const UserDetailsPage = async({params}) => {
     user.id===parseInt(userId)
   );
 
- const {picture,name,days_since_contact, tags,status,bio,goal,next_due_date}=user;
 
+
+
+
+
+
+
+  
+ const {picture,name,days_since_contact, tags,status,bio,goal,next_due_date}=user;
+ 
     return (
         <div>
            
@@ -174,7 +184,7 @@ const UserDetailsPage = async({params}) => {
       />
     </div>
   </div>
-    <h2 className="card-titl font-bold">{name}</h2>
+    <h2 className="card-title font-bold">{name}</h2>
     <p className={status==="Almost Due" ? "text-white badge badge-sm bg-amber-500 text-xs rounded-full" :status==="Overdue" ? "text-white badge badge-sm bg-red-500 text-xs rounded-full": "text-white badge badge-sm bg-green-900 text-xs  rounded-full" } >{status}</p> 
      <div className='flex items-center justify-center'>
     {
@@ -231,41 +241,18 @@ const UserDetailsPage = async({params}) => {
 
   <p className='text-gray-600 px-2'>Connect every <span className='text-black font-bold'>{goal} days</span></p> 
 </div>
- <div className="card  bg-base-100 card-lg shadow-sm p-4 mt-2  ">
-    <p className='text-emerald-900  mb-2'>Quick Check-In</p>
-     <div className='flex flex-row  mt-2  bg-white gap-3 '>
-      <div className="card shadow-sm bg-gray-100 w-1/3 ">
-      <div className="card-body items-center text-center">
-      <i className="fa-solid fa-phone-volume"></i> 
-      <h2 >Call</h2>
-      </div>
-      </div> 
+ 
+<Toast></Toast>
 
-<div className="card shadow-sm w-1/3">
-<div className=" card card-body items-center text-center bg-gray-100 ">
-<i className="fa-regular fa-message"></i>
-<h2>Text</h2>
-</div>
-</div>
-   <div className="card shadow-sm w-1/3">
-   <div className="card-body items-center text-center bg-gray-100">
-    <i className="fa-solid fa-video"></i>
-    <h2>video</h2>
-   </div>
-   </div>
-
-    </div> 
-
-</div> 
 </div>
 
 
-
+ 
   </div>
 
 
             }
-         
+        
         </div>
     );
 };
